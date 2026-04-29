@@ -863,6 +863,31 @@
 </footer>
 
 <script>
+  // Get score from localStorage
+  const quizScore = localStorage.getItem('quizScore');
+  
+  // Determine which tab to show based on score
+  function getTabFromScore(score) {
+    if (!score) return 0; // Default to first tab if no score
+    const s = parseInt(score);
+    if (s >= 27) return 0; // Overloaded
+    if (s >= 21) return 1; // Running on Fumes
+    if (s >= 15) return 2; // Lacking Foundation
+    return 3; // Ready to Build
+  }
+  
+  // Display score in hero section
+  if (quizScore) {
+    const scoreDisplay = document.createElement('p');
+    scoreDisplay.style.cssText = 'font-size: 14px; color: var(--brown); margin-top: 16px; font-weight: 500;';
+    scoreDisplay.textContent = 'Your Score: ' + quizScore + ' out of 32';
+    document.querySelector('.hero-sub').after(scoreDisplay);
+    
+    // Auto-select the correct tab
+    const correctTab = getTabFromScore(quizScore);
+    setTab(correctTab);
+  }
+  
   function setTab(index) {
     document.querySelectorAll('.tab-btn').forEach(function(btn, i) {
       btn.classList.toggle('active', i === index);
