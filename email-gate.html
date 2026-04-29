@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Results Are Ready | Passports 2 Fitness</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #F5F0E8;
+    --tan: #C9B99A;
+    --brown: #7A6552;
+    --brown-dark: #4A3B2E;
+    --text: #2E2319;
+    --text-muted: #7A6552;
+    --white: #FDFAF5;
+  }
+
+  html, body {
+    min-height: 100vh;
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'Jost', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .gate-wrapper {
+    max-width: 900px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    background: var(--white);
+    border: 1px solid rgba(122, 101, 82, 0.2);
+    overflow: hidden;
+  }
+
+  .gate-image {
+    background: var(--cream);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500"><rect fill="%23EDE7D9" width="400" height="500"/><circle cx="200" cy="250" r="120" fill="%23C9B99A" opacity="0.3"/></svg>');
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+  }
+
+  .gate-content {
+    padding: 60px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .gate-eyebrow {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--tan);
+    margin-bottom: 20px;
+  }
+
+  .gate-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--brown-dark);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .gate-subtitle {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  /* MailerLite form will be embedded here */
+  .ml-form-embed {
+    width: 100%;
+  }
+
+  /* Form styling placeholder - MailerLite may override */
+  .ml-form-embed input[type="text"],
+  .ml-form-embed input[type="email"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid rgba(122, 101, 82, 0.3);
+    background: var(--white);
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 12px;
+    outline: none;
+  }
+
+  .ml-form-embed input:focus {
+    border-color: var(--brown);
+  }
+
+  .ml-form-embed button {
+    width: 100%;
+    background: var(--brown-dark);
+    color: var(--cream);
+    border: none;
+    padding: 14px 24px;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .ml-form-embed button:hover {
+    background: var(--brown);
+  }
+
+  @media (max-width: 768px) {
+    .gate-wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    .gate-image {
+      min-height: 200px;
+      order: -1;
+    }
+
+    .gate-content {
+      padding: 40px 28px;
+    }
+
+    .gate-title {
+      font-size: 28px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="gate-wrapper">
+    <div class="gate-image"></div>
+    
+    <div class="gate-content">
+      <p class="gate-eyebrow">The Regulation Quiz</p>
+      <h1 class="gate-title">Your Results Are Ready</h1>
+      <p class="gate-subtitle">Enter your email to access your stage-specific guide from the Regulation Quiz.</p>
+
+      <!-- 
+        PASTE YOUR MAILERLITE EMBEDDED FORM CODE BELOW THIS COMMENT
+        
+        Steps:
+        1. Go to MailerLite → Forms (not Sites)
+        2. Create new Embedded Form
+        3. Add Name + Email fields
+        4. Set button text to "Take Me to My Results"
+        5. In Settings → set redirect to: https://coachparis.github.io/quiz-results/
+        6. Get the embed code
+        7. Paste it here, replacing this comment
+      -->
+
+      <div class="ml-form-embed">
+        <p style="font-size: 13px; color: var(--tan); border: 1px dashed var(--tan); padding: 20px; text-align: center; line-height: 1.6;">
+          <strong style="display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.1em; font-size: 11px;">MailerLite Form Goes Here</strong>
+          Paste your MailerLite embedded form code in the HTML file where this placeholder div is located.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
