@@ -4,6 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Your Results Are Ready | Passports 2 Fitness</title>
+<script>
+  (function(w, d, t, h, s, n) {
+    w.FlodeskObject = n;
+    var fn = function() {
+      (w[n].q = w[n].q || []).push(arguments);
+    };
+    w[n] = w[n] || fn;
+    var f = d.getElementsByTagName(t)[0];
+    var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+    var sm = d.createElement(t);
+    sm.async = true;
+    sm.type = 'module';
+    sm.src = h + s + '.mjs' + v;
+    f.parentNode.insertBefore(sm, f);
+    var sn = d.createElement(t);
+    sn.async = true;
+    sn.noModule = true;
+    sn.src = h + s + '.js' + v;
+    f.parentNode.insertBefore(sn, f);
+  })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -159,25 +180,14 @@
       <h1 class="gate-title">Your Results Are Ready</h1>
       <p class="gate-subtitle">Enter your email to access your stage-specific guide from the Regulation Quiz.</p>
 
-      <!-- 
-        PASTE YOUR MAILERLITE EMBEDDED FORM CODE BELOW THIS COMMENT
-        
-        Steps:
-        1. Go to MailerLite → Forms (not Sites)
-        2. Create new Embedded Form
-        3. Add Name + Email fields
-        4. Set button text to "Take Me to My Results"
-        5. In Settings → set redirect to: https://coachparis.github.io/quiz-results/
-        6. Get the embed code
-        7. Paste it here, replacing this comment
-      -->
-
-      <div class="ml-form-embed">
-        <p style="font-size: 13px; color: var(--tan); border: 1px dashed var(--tan); padding: 20px; text-align: center; line-height: 1.6;">
-          <strong style="display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.1em; font-size: 11px;">MailerLite Form Goes Here</strong>
-          Paste your MailerLite embedded form code in the HTML file where this placeholder div is located.
-        </p>
-      </div>
+      <!-- Flodesk Form Embed -->
+      <div id="fd-form-69f0b0e4fe9c729a0eb4f248"></div>
+      <script>
+        window.fd('form', {
+          formId: '69f0b0e4fe9c729a0eb4f248',
+          containerEl: '#fd-form-69f0b0e4fe9c729a0eb4f248'
+        });
+      </script>
 
     </div>
   </div>
